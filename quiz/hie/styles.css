@@ -1,0 +1,163 @@
+option {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+* {
+    color: white;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+body {
+    text-align: center;
+    background-color: black;
+}
+
+.beschreibung {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+
+footer, input, select, button {
+    text-align: center;
+    background-color: goldenrod;
+    color: black;
+    font-weight: bolder;
+}
+
+button {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+option {
+    color: black;
+    font-weight: bold;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+header {
+    background-color: goldenrod;
+    font-size: x-large;
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-shadow:  1px  1px 1px black,
+                  1px -1px 1px black,
+                 -1px  1px 1px black,
+                 -1px -1px 1px black;
+}
+
+
+header h1 {
+    font-weight: bolder;
+    background-color: goldenrod;
+}
+
+a, .list li, .list p {
+    color: black;
+    font-weight: bolder;
+    list-style-type: none;
+}
+
+.list li {
+    text-align: left;
+}
+
+.list input {
+    color: goldenrod;
+    background-color: black;
+}
+
+.list select {
+    width: 58%;
+}
+
+.list {
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 25%;
+    background-color: goldenrod;
+    border-radius: .5em;
+    box-shadow: 5px 0 5px -5px white,
+    -5px 0 5px -5px white;
+}
+
+/* button animations */
+nav ul {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    --c: black;
+    color: var(--c);
+    font-size: 12px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.2em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+}
+
+nav ul li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+nav ul li a:hover {
+    color: goldenrod;
+}
+
+nav ul li:hover span {
+    transform: translateY(0) scale(2);
+}
+
+nav ul li span:nth-child(1) {
+    --n: 1;
+}
+
+nav ul li span:nth-child(2) {
+    --n: 2;
+}
+
+nav ul li span:nth-child(3) {
+    --n: 3;
+}
+
+nav ul li span:nth-child(4) {
+    --n: 4;
+}
